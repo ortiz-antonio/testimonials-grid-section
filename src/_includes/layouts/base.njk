@@ -27,7 +27,11 @@
   </head>
   <body>
     <div class="container wrapper">
-      <main>{% block content %}{% endblock %}</main>
+      <main>
+        {% block content %}
+        {% endblock %}
+        <h1 class="visually-hidden">{{ title }}</h1>
+      </main>
       <footer>
         <p class="attribution">
           <span
