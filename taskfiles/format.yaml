@@ -1,0 +1,39 @@
+version: '3'
+
+tasks:
+  src:
+    cmds:
+      - task format:src:css
+      - task format:src:html
+      - task format:src:json
+  src:css:
+    sources:
+      - src/css/**/*.css
+    cmds:
+      - pnpm stylelint src/css/**/*.css --fix
+      - pnpm prettier  src/css/**/*.css --write
+
+  src:json:
+    sources:
+      - src/design-tokens/**/*.json
+    cmds:
+      - pnpm prettier src/design-tokens --write
+
+  src:html:
+    sources:
+      - src/_includes/**/*.njk
+    cmds:
+      - pnpm prettier  src/_includes/**/*.njk --write
+
+  dist:
+    cmds:
+      - task format:dist:lint
+      - task format:dist:prettier
+
+  dist:prettier:
+    cmds:
+      - pnpm prettier ./dist --write
+  dist:lint:
+    cmds:
+      - pnpm stylelint dist/css/*.css --fix
+      - pnpm stylelint dist/*.html --fix

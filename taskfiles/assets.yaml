@@ -1,0 +1,19 @@
+version: '3'
+
+tasks:
+  create:
+    sources:
+      - ./src/fonts/**/*
+      - ./src/images/**/*
+    generates:
+      - ./dist/fonts/*
+      - ./dist/images/*
+    cmds:
+      - task assets:clean
+      - cp -r ./src/fonts/* ./dist/fonts
+      - cp -r ./src/images/* ./dist/images
+
+  clean:
+    cmds:
+      - rm -rf ./dist/fonts && mkdir -p ./dist/fonts
+      - rm -rf ./dist/images && mkdir -p ./dist/images

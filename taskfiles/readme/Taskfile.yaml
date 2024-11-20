@@ -1,0 +1,8 @@
+version: '3'
+
+tasks:
+  fill:
+    sources:
+      - README.md
+    cmds:
+      - node ./utils/readme/index.js

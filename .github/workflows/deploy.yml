@@ -1,0 +1,43 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        
+      - name: Install Task
+        uses: arduino/setup-task@v2
+        with:
+          version: 3.x
+          repo-token: ${{ secrets.GH_FINE_GRAINED_TOKEN }}
+          
+      - name: Run Taskfile - build
+        run: task build:deploy
+        
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GH_FINE_GRAINED_TOKEN }}
+          publish_dir: ./dist
+
+      - name: Update About Section
+        if: ${{ success() }}
+        env:
+          REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ secrets.GH_FINE_GRAINED_TOKEN }}
+        run: |
+          gh api \
+          --method PATCH \
+          -H "Accept: application/vnd.github+json" \
+          -H "X-GitHub-Api-Version: 2022-11-28" \
+          /repos/"$REPO" \
+          -F "description=$(jq -r '.summary' project-tokens/project.json)" \
+          -F "homepage=https://ortiz-antonio.github.io/$(jq -r '.key' project-tokens/project.json)" 

@@ -1,0 +1,7 @@
+version: '3'
+
+
+tasks:
+  update:
+    cmds:
+      - node ./utils/gh-about/index.js

@@ -1,0 +1,32 @@
+{
+  "name": "CUBE-Eleventy-Taskfile-boilerplate",
+  "description": "This is a boilerplate for my Frontend Mentor projects, based on Andy Bell Cube BoilerPlate",
+  "keywords": [],
+  "author": {
+    "name": "Antonio Ortiz",
+    "username": "ortiz-antonio",
+    "url": "https://ortiz.studio"
+  },
+  "license": "ISC",
+  "packageManager": "pnpm@9.12.3",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "clean-css": "^5.3.2",
+    "concurrently": "^8.2.2",
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "postcss-import-ext-glob": "^2.1.1",
+    "postcss-js": "^4.0.1",
+    "slugify": "^1.6.6",
+    "stylelint": "^16.10.0",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-config-two-dash-bem": "^1.0.0",
+    "tailwindcss": "^3.3.5"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "prettier-plugin-jinja-template": "^2.0.0"
+  }
+}

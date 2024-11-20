@@ -1,0 +1,17 @@
+version: '3'
+
+tasks:
+  start:
+    deps: [postcss, serve]
+
+  serve:
+    cmds:
+      - pnpm eleventy --serve
+    daemon: true
+    silent: false
+
+  postcss:
+    cmds:
+      - pnpm postcss src/css/global.css -o dist/css/global.css --watch
+    daemon: true
+    silent: false

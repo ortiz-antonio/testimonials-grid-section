@@ -1,0 +1,12 @@
+@import url('tailwindcss/base');
+@import url('global/reset.css');
+@import url('global/fonts.css');
+@import url('tailwindcss/components');
+@import url('global/variables.css');
+@import url('global/global-styles.css');
+
+@import-glob 'blocks/*.css';
+@import-glob 'compositions/*.css';
+@import-glob 'utilities/*.css';
+
+@import url('tailwindcss/utilities');
