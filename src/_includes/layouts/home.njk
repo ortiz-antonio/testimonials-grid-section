@@ -3,6 +3,7 @@
   {% for testimonial in testimonials.items%}
     <h2>    {{testimonial.author}}</h2>
    <p> {{testimonial.status}}</p>
-    <p>{{testimonial.summary}}</p>
+   <p>{{testimonial.summary}}</p>
+   <q>{{testimonial.quote}}</q>
     {%endfor%}
 {% endblock %}
