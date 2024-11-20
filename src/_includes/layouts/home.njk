@@ -1,11 +1,8 @@
 {% extends "layouts/base.njk" %}
 {% block content %}
-  <article class="flow">
-    <h1>{{ title }}</h1>
-
-    <div class="switcher">
-      <h2 class="text-primary">{{ subtitle }}</h2>
-      <p>{{ summary }}</p>
-    </div>
-  </article>
+  {% for testimonial in testimonials.items%}
+    <h2>    {{testimonial.author}}</h2>
+   <p> {{testimonial.status}}</p>
+    <p>{{testimonial.summary}}</p>
+    {%endfor%}
 {% endblock %}
