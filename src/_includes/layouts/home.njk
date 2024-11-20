@@ -1,9 +1,9 @@
 {% extends "layouts/base.njk" %}
 {% block content %}
-  {% for testimonial in testimonials.items%}
-    <h2>    {{testimonial.author}}</h2>
-   <p> {{testimonial.status}}</p>
-   <p>{{testimonial.summary}}</p>
-   <q>{{testimonial.quote}}</q>
-    {%endfor%}
+  {% for testimonial in testimonials.items %}
+    <h2>{{ testimonial.author }}</h2>
+    <p>{{ testimonial.status }}</p>
+    <p>{{ testimonial.summary }}</p>
+    <q>{{ testimonial.quote }}</q>
+  {% endfor %}
 {% endblock %}
