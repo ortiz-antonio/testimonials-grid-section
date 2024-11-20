@@ -5,6 +5,7 @@ title: "Frontend Mentor Graduates"
 testimonials:
   items:
     - author: Daniel Clifford
+      authorSlug: daniel-clifford
       status: Verified Graduate
       summary: |
         I received a job offer mid-course, and the subjects I learned were current, if not more so, 
@@ -17,6 +18,7 @@ testimonials:
         the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup.
 
     - author: Jonathan Walters
+      authorSlug: jonathan-walters
       status: Verified Graduate
       summary: |
         The team was very supportive and kept me motivated
@@ -25,6 +27,7 @@ testimonials:
         for a big company. This was one of the best investments I’ve made in myself.
 
     - author: Jeanette Harmon
+      authorSlug: jeanette-harmon
       status: Verified Graduate
       summary: |
         An overall wonderful and rewarding experience
@@ -33,6 +36,7 @@ testimonials:
         while doing something I love. 
 
     - author:  Patrick Abrams
+      authorSlug: patrick-abrams
       status: Verified Graduate
       summary: |
         Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and 
@@ -44,6 +48,7 @@ testimonials:
         an incredible community of smart and amazing people.
 
     - author: Kira Whittle
+      authorSlug: kira-whittle
       status: Verified Graduate
       summary: |
         Such a life-changing experience. Highly recommended!
