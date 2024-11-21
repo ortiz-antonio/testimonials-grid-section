@@ -55,10 +55,10 @@
 }
 
 .testimonial__summary {
-  font-weight: 600;
   font-size: var(--size-step-3);
+  line-height: var(--leading-fine);
 }
 
 .testimonial__quote {
-  line-height: var(--leading-loose);
+  font-weight: var(--font-bold);
 }
