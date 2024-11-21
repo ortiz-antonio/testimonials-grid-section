@@ -182,13 +182,13 @@ body {
   color: var(--color-base);
 
   &:hover {
-    color: var(--color-primary);
+    color: var(--color-moderate-violet);
   }
 
   &:focus-visible {
-    outline: 2px solid var(--color-primary);
+    outline: 2px solid;
     padding: 2px;
-    color: var(--color-primary);
+    color: var(--color-moderate-violet);
     text-decoration: none;
   }
 }
@@ -204,13 +204,13 @@ body {
   color: var(--color-dark-grayish-blue);
 }
 
-.testimonial img{
-  border-radius:50%;
-  aspect-ratio:1;
+.testimonial img {
+  border-radius: 50%;
+  aspect-ratio: 1;
 }
 
 .testimonial[data-layout='daniel-clifford'] {
-  background-color: var(--color-moderate-violet);
+  background: var(--color-moderate-violet) url("../images/bg-pattern-quotation.svg") no-repeat top right;
   color: var(--color-light-gray);
 }
 
@@ -219,16 +219,17 @@ body {
   color: var(--color-light-gray);
 }
 
-.testimonial[data-layout="patrick-abrams"]{
+.testimonial[data-layout='patrick-abrams'] {
   background-color: var(--color-dark-blackish-blue);
   color: var(--color-light-gray);
 }
 
-.testimonial__status, .testimonial__quote{
-  opacity:.5;
+.testimonial__status,
+.testimonial__quote {
+  opacity: 0.5;
 }
 
-.testimonial__summary{
+.testimonial__summary {
   font-weight: 600;
 }
 
