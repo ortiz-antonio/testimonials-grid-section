@@ -3,16 +3,32 @@
   "description": "Hex color codes that can be shared, cross-platform. They can be converted at point of usage, such as HSL for web or CMYK for print.",
   "items": [
     {
-      "name": "Dark",
-      "value": "#030303"
+      "name": "Moderate violet",
+      "value": "hsl(263, 55%, 52%)"
     },
     {
-      "name": "Light",
-      "value": "#ffffff"
+      "name": "dark grayish blue",
+      "value": "hsl(217, 19%, 35%)"
     },
     {
-      "name": "Primary",
-      "value": "#02394A"
+      "name": "dark blackish blue",
+      "value": "hsl(219, 29%, 14%)"
+    },
+    {
+      "name": "White",
+      "value": "hsl(0, 0%, 100%)"
+    },
+    {
+      "name": "Light gray",
+      "value": "hsl(0, 0%, 81%)"
+    },
+    {
+      "name": "Light grayish blue",
+      "value": "hsl(210, 46%, 95%)"
+    },
+    {
+      "name": "base",
+      "value": "dark-blackish-blue"
     }
   ]
 }

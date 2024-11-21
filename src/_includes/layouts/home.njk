@@ -4,7 +4,9 @@
     <article
       id="{{ testimonial.authorSlug }}"
       aria-labelledby="{{ testimonial.authorSlug }}"
+      class="testimonial"
     >
+      <img alt="" src="images/{{ testimonial.authorSlug }}.jpg" />
       <h2>{{ testimonial.author }}</h2>
       <p>{{ testimonial.status }}</p>
       <p>{{ testimonial.summary }}</p>
