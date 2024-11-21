@@ -3,6 +3,7 @@
   background-color: var(--color-white);
   border-radius: 10px;
   color: var(--color-dark-grayish-blue);
+  padding: var(--space-m);
 }
 
 .testimonial img {
@@ -11,7 +12,10 @@
 }
 
 .testimonial[data-layout='daniel-clifford'] {
-  background: var(--color-moderate-violet) url("../images/bg-pattern-quotation.svg") no-repeat top right;
+  background: var(--color-moderate-violet) url('../images/bg-pattern-quotation.svg')
+              no-repeat top right;
+  border-right: var(--space-m) solid transparent;
+
   color: var(--color-light-gray);
 }
 
