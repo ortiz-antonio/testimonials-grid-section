@@ -7,13 +7,13 @@
   color: var(--color-base);
 
   &:hover {
-    color: var(--color-primary);
+    color: var(--color-moderate-violet);
   }
 
   &:focus-visible {
-    outline: 2px solid var(--color-primary);
+    outline: 2px solid;
     padding: 2px;
-    color: var(--color-primary);
+    color: var(--color-moderate-violet);
     text-decoration: none;
   }
 }
