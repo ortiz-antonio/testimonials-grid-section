@@ -2,4 +2,33 @@
   border: 1px solid black;
   background-color: var(--color-white);
   border-radius: 10px;
+  color: var(--color-dark-grayish-blue);
+}
+
+.testimonial img{
+  border-radius:50%;
+  aspect-ratio:1;
+}
+
+.testimonial[data-layout='daniel-clifford'] {
+  background-color: var(--color-moderate-violet);
+  color: var(--color-light-gray);
+}
+
+.testimonial[data-layout='jonathan-walters'] {
+  background-color: var(--color-dark-grayish-blue);
+  color: var(--color-light-gray);
+}
+
+.testimonial[data-layout="patrick-abrams"]{
+  background-color: var(--color-dark-blackish-blue);
+  color: var(--color-light-gray);
+}
+
+
+.testimonial__status, .testimonial__quote{
+  opacity:.5;
+}
+ .testimonial__summary{
+  font-weight: 600;
 }

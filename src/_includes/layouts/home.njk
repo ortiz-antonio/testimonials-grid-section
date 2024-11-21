@@ -5,12 +5,13 @@
       id="{{ testimonial.authorSlug }}"
       aria-labelledby="{{ testimonial.authorSlug }}"
       class="testimonial"
+      data-layout="{{ testimonial.authorSlug }}"
     >
       <img alt="" src="images/{{ testimonial.authorSlug }}.jpg" />
       <h2>{{ testimonial.author }}</h2>
-      <p>{{ testimonial.status }}</p>
-      <p>{{ testimonial.summary }}</p>
-      <p><q>{{ testimonial.quote }}</q></p>
+      <p class="testimonial__status">{{ testimonial.status }}</p>
+      <p class="testimonial__summary">{{ testimonial.summary }}</p>
+      <p class="testimonial__quote"><q>{{ testimonial.quote }}</q></p>
     </article>
   {% endfor %}
 {% endblock %}
