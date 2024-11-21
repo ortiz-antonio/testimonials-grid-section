@@ -3,7 +3,6 @@
   border-radius: 10px;
   color: var(--color-dark-grayish-blue);
   padding: var(--space-l);
-
 }
 
 .testimonial img {
@@ -11,13 +10,19 @@
   aspect-ratio: 1;
 }
 
-.testimonial__header h2, .testimonial__header p{
-  margin:0;
+.testimonial__header h2 {
+  margin: 0;
+  font-size: var(--size-step-0);
 }
 
-.testimonial__header{
+.testimonial__header p {
+  font-size: var(--size-step-1);
+  margin: 0;
+}
+
+.testimonial__header {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   gap: var(--space-s);
 }
 
@@ -29,7 +34,7 @@
 
 .testimonial[data-layout='daniel-clifford'] {
   background: var(--color-moderate-violet) url('../images/bg-pattern-quotation.svg')
-    no-repeat top right;
+    no-repeat top right / 35%;
   border-right: var(--space-m) solid transparent;
   color: var(--color-light-gray);
 }
@@ -51,4 +56,9 @@
 
 .testimonial__summary {
   font-weight: 600;
+  font-size: var(--size-step-3);
+}
+
+.testimonial__quote {
+  line-height: var(--leading-loose);
 }
