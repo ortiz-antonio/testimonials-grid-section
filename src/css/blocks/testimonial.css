@@ -1,5 +1,4 @@
 .testimonial {
-  border: 1px solid black;
   background-color: var(--color-white);
   border-radius: 10px;
   color: var(--color-dark-grayish-blue);
@@ -11,17 +10,26 @@
   aspect-ratio: 1;
 }
 
-.testimonial[data-layout='daniel-clifford'] img, .testimonial[data-layout='patrick-abrams'] img{
+.testimonial__header h2, .testimonial__header p{
+  margin:0;
+}
+
+.testimonial__header{
+  display: flex;
+  flex-direction:row;
+  gap: var(--space-s);
+}
+
+.testimonial[data-layout='daniel-clifford'] img,
+.testimonial[data-layout='patrick-abrams'] img {
   padding: 3px;
   background-color: var(--color-light-violet);
 }
 
-
 .testimonial[data-layout='daniel-clifford'] {
   background: var(--color-moderate-violet) url('../images/bg-pattern-quotation.svg')
-              no-repeat top right;
+    no-repeat top right;
   border-right: var(--space-m) solid transparent;
-
   color: var(--color-light-gray);
 }
 
