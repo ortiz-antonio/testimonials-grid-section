@@ -3,13 +3,19 @@
   background-color: var(--color-white);
   border-radius: 10px;
   color: var(--color-dark-grayish-blue);
-  padding: var(--space-m);
+  padding: var(--space-l);
 }
 
 .testimonial img {
   border-radius: 50%;
   aspect-ratio: 1;
 }
+
+.testimonial[data-layout='daniel-clifford'] img, .testimonial[data-layout='patrick-abrams'] img{
+  padding: 3px;
+  background-color: var(--color-light-violet);
+}
+
 
 .testimonial[data-layout='daniel-clifford'] {
   background: var(--color-moderate-violet) url('../images/bg-pattern-quotation.svg')
