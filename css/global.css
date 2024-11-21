@@ -147,7 +147,7 @@ textarea:not([rows]) {
   --leading-loose: 1.7;
   --font-base: barlow semi condensed,segoe ui,roboto,helvetica neue,arial,sans-serif;
   --font-medium: 500;
-  --font-bold: 700;
+  --font-bold: 600;
   --breakpoint-sm: 20.625rem;
   --breakpoint-md: 47.5rem;
   --breakpoint-lg: 75rem;
@@ -173,7 +173,7 @@ body {
   color: var(--color-dark);
   font-size: var(--size-step-0);
   font-family: var(--font-base);
-  line-height: var(--leading-standart);
+  line-height: var(--leading-standard);
 }
 
 .attribution {
@@ -257,12 +257,12 @@ body {
 }
 
 .testimonial__summary {
-  font-weight: 600;
   font-size: var(--size-step-3);
+  line-height: var(--leading-fine);
 }
 
 .testimonial__quote {
-  line-height: var(--leading-loose);
+  font-weight: var(--font-bold);
 }
 
 /*
