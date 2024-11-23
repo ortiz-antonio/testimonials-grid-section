@@ -136,12 +136,10 @@ textarea:not([rows]) {
   --space-3xl-4xl: clamp(6.75rem, 5.66rem + 5.29vw, 9.625rem);
   --space-s-l: clamp(1.125rem, 0.51rem + 2.99vw, 2.75rem);
   --space-xs-m: clamp(0.875rem, 0.69rem + 0.92vw, 1.375rem);
-  --size-step-5: clamp(2.5rem, 1.86rem + 3.10vw, 4.1875rem);
-  --size-step-4: clamp(2.125rem, 1.65rem + 2.30vw, 3.375rem);
-  --size-step-3: clamp(1.8125rem, 1.48rem + 1.61vw, 2.6875rem);
-  --size-step-2: clamp(1.5625rem, 1.35rem + 1.03vw, 2.125rem);
-  --size-step-1: clamp(0.9375rem, 0.87rem + 0.34vw, 1.125rem);
-  --size-step-0: clamp(1.125rem, 1.03rem + 0.46vw, 1.375rem);
+  --size-step-3: clamp(1.625rem, 1.32rem + 1.49vw, 2.4375rem);
+  --size-step-2: clamp(1.375rem, 1.16rem + 1.03vw, 1.9375rem);
+  --size-step-1: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+  --size-step-0: clamp(1rem, 0.91rem + 0.46vw, 1.25rem);
   --leading-flat: 1;
   --leading-fine: 1.15;
   --leading-loose: 1.7;
@@ -159,7 +157,7 @@ textarea:not([rows]) {
   --leading-standard: 1.5;
   --grid-min-item-size: 18rem;
   --grid-placement: auto-fit;
-  --wrapper-max-width: 60rem;
+  --wrapper-max-width: 80rem;
 }
 
 /* 
@@ -215,7 +213,7 @@ body {
 
 .testimonial__header h2 {
   margin: 0;
-  font-size: var(--size-step-0);
+  font-size: var(--size-step-1);
 }
 
 .testimonial__header p {
@@ -227,6 +225,15 @@ body {
   display: flex;
   flex-direction: row;
   gap: var(--space-s);
+}
+
+.testimonial__summary {
+  font-size: var(--size-step-2);
+  line-height: var(--leading-fine);
+}
+
+.testimonial__quote {
+  font-weight: var(--font-bold);
 }
 
 .testimonial[data-layout='daniel-clifford'] img,
@@ -251,19 +258,35 @@ body {
   background-color: var(--color-dark-blackish-blue);
   color: var(--color-light-gray);
 }
+/* stylelint-disable */
+@media (min-width: 75rem) {
+  .testimonial[data-layout='daniel-clifford'] {
+    grid-column: 1;
+  }
 
+  .testimonial[data-layout='jonathan-walters'] {
+    grid-column: 2;
+  }
+
+  .testimonial[data-layout='patrick-abrams'] {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .testimonial[data-layout='kira-whittle'] {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+
+  .testimonial[data-layout='jeanette-harmon'] {
+    grid-row: 2;
+    grid-column: 2;
+  }
+}
+/* stylelint-enable */
 .testimonial__status,
 .testimonial__quote {
   opacity: 0.5;
-}
-
-.testimonial__summary {
-  font-size: var(--size-step-3);
-  line-height: var(--leading-fine);
-}
-
-.testimonial__quote {
-  font-weight: var(--font-bold);
 }
 
 /*
@@ -316,11 +339,15 @@ ideally, as a minimum.
 to change how empty grid tracks are handled */
 .grid {
   display: grid;
-  grid-template-columns: repeat(
-    var(--grid-placement, auto-fill),
-    minmax(var(--grid-min-item-size, 16rem), 1fr)
-  );
   gap: var(--gutter, var(--space-s-l));
+  grid-template-columns: 1fr;
+
+  /* stylelint-disable */
+  @media (min-width: 75rem) {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  /* stylelint-enable */
 }
 
 /* A split 50/50 layout */
