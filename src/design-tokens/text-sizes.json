@@ -3,39 +3,29 @@
   "description": "A minimum and maximum text size size allows you to pick the right size from a ratio, depending on the context size. The min and max sizes are in pixels and should be converted to appropiate sizes",
   "items": [
     {
-      "name": "Step 5",
-      "min": 40,
-      "max": 67
-    },
-    {
-      "name": "Step 4",
-      "min": 34,
-      "max": 54
-    },
-    {
       "name": "Step 3",
-      "min": 29,
-      "max": 43
+      "min": 26,
+      "max": 39
     },
     {
       "name": "Step 2",
-      "min": 25,
-      "max": 34
+      "min": 22,
+      "max": 31
     },
     {
       "name": "Step 1",
-      "min": 21,
-      "max": 28
+      "min": 19,
+      "max": 25
     },
     {
       "name": "Step 0",
-      "min": 18,
-      "max": 22
+      "min": 16,
+      "max": 20
     },
     {
       "name": "Step -1",
-      "min": 15,
-      "max": 18
+      "min": 14,
+      "max": 16
     }
   ]
 }
