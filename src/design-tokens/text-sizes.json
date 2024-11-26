@@ -4,28 +4,23 @@
   "items": [
     {
       "name": "Step 3",
-      "min": 26,
-      "max": 39
+      "min": 21,
+      "max": 33
     },
     {
       "name": "Step 2",
-      "min": 22,
-      "max": 31
+      "min": 19,
+      "max": 27
     },
     {
       "name": "Step 1",
-      "min": 19,
-      "max": 25
+      "min": 17,
+      "max": 21
     },
     {
       "name": "Step 0",
-      "min": 16,
-      "max": 20
-    },
-    {
-      "name": "Step -1",
-      "min": 14,
-      "max": 16
+      "min": 15,
+      "max": 17
     }
   ]
 }
