@@ -1,3 +1,4 @@
+{% set assetHash = "v=1.0.0" %}
 {% extends "layouts/base.njk" %}
 {% block content %}
   <div class="grid">
@@ -11,9 +12,11 @@
         <div class="testimonial__header">
           <img
             alt=""
-            src="images/{{ testimonial.authorSlug }}.jpg"
-            srcset="images/{{ testimonial.authorSlug }}.jpg 1x,
-                 images/{{ testimonial.authorSlug }}@2x.jpg 2x"
+            src="images/{{ testimonial.authorSlug }}.jpg?{{assetHash}}"
+            srcset="
+              images/{{ testimonial.authorSlug }}.jpg?{{assetHash}}    1x,
+              images/{{ testimonial.authorSlug }}@2x.jpg?{{assetHash}} 2x
+            "
             width="50px"
             height="50px"
           />
