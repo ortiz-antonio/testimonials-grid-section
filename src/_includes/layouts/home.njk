@@ -7,15 +7,17 @@
         id="{{ testimonial.authorSlug }}"
         aria-labelledby="{{ testimonial.authorSlug }}"
         class="testimonial"
-        data-layout="{{ testimonial.authorSlug }}"
+        {% if testimonial.authorSlug == "daniel-clifford" or "jonathan-walters" or "patrick-addms" %}
+          data-layout-author="{{ testimonial.authorSlug }}"
+        {% endif %}
       >
         <div class="testimonial__header">
           <img
             alt=""
-            src="images/{{ testimonial.authorSlug }}.jpg?{{assetHash}}"
+            src="images/{{ testimonial.authorSlug }}.jpg?{{ assetHash }}"
             srcset="
-              images/{{ testimonial.authorSlug }}.jpg?{{assetHash}}    1x,
-              images/{{ testimonial.authorSlug }}@2x.jpg?{{assetHash}} 2x
+              images/{{ testimonial.authorSlug }}.jpg?{{ assetHash }}    1x,
+              images/{{ testimonial.authorSlug }}@2x.jpg?{{ assetHash }} 2x
             "
             width="50px"
             height="50px"

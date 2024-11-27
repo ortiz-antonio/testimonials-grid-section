@@ -29,10 +29,6 @@
     {
       "name": "Light grayish blue",
       "value": "hsl(210, 46%, 95%)"
-    },
-    {
-      "name": "base",
-      "value": "dark-blackish-blue"
     }
   ]
 }

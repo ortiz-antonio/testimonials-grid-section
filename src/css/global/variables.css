@@ -8,4 +8,6 @@
   --grid-min-item-size: 18rem;
   --grid-placement: auto-fit;
   --wrapper-max-width: 80rem;
+  --color-base-dark: var(--color-light-grayish-blue);
+  --color-base: var(--color-dark-blackish-blue);
 }
