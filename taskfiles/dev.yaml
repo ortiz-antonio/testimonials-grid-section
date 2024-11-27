@@ -1,8 +1,21 @@
 version: '3'
 
+includes:
+  format: ./format.yaml
+  assets: ./assets.yaml
+  setup: ./setup.yaml
+  
 tasks:
-  start:
-    deps: [postcss, serve]
+  
+  default:
+    deps:
+      - task: setup:install
+      - task: postcss
+      - task: serve
+      - task: assets:create
+    cmds:
+      - task: format:src
+      - task: dev:start
 
   serve:
     cmds:

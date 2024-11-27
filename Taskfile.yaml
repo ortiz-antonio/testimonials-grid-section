@@ -3,58 +3,10 @@ version: '3'
 dotenv: ['{{.HOME}}/.env']
 
 includes:
-  format: ./taskfiles/format.yaml
-  assets: ./taskfiles/assets.yaml
   build: ./taskfiles/build.yaml
   dev: ./taskfiles/dev.yaml
-  utils:readme: ./taskfiles/readme/Taskfile.yaml
-  utils:utopia: ./taskfiles/utopia/Taskfile.yaml
-  utils:gh-about: ./taskfiles/gh-about/Taskfile.yaml
+  setup: ./taskfiles/setup.yaml
 
 tasks:
   default:
     - task -a
-
-  setup:
-    cmds:
-      - curl https://get.volta.sh | bash
-      - volta install node
-      - volta install pnpm
-
-  install:
-    source: package.json
-    generates:
-      - pnpm-lock.yaml
-    cmds:
-      - echo "Installing package.json deps"
-      - pnpm install
-
-  dev:
-    deps: [install, assets:create]
-    cmds:
-      - task format:src
-      - task dev:start
-
-  build:deploy:
-    deps: [install, assets:create]
-    cmds:
-      - task build:site
-      - task format:dist
-
-  build:
-    deps: [clean, install]
-    cmds:
-      - task build:deploy
-      - task format:src
-      - task build:site
-      - task format:dist
-
-      
-  utils:watch:
-    deps: [assets:create, utils:utopia:tokens]
-    watch: true
-
-  clean:
-    cmds:
-      - rm -rf ./dist
-      - mkdir ./dist

@@ -3,9 +3,10 @@ version: '3'
 tasks:
   src:
     cmds:
-      - task format:src:css
-      - task format:src:html
-      - task format:src:json
+      - task: src:css
+      - task: src:html
+      - task: src:json
+      
   src:css:
     sources:
       - src/css/**/*.css
@@ -27,8 +28,8 @@ tasks:
 
   dist:
     cmds:
-      - task format:dist:lint
-      - task format:dist:prettier
+      - task: dist:lint
+      - task: dist:prettier
 
   dist:prettier:
     cmds:

@@ -2,6 +2,7 @@ version: '3'
 
 tasks:
   create:
+    deps: [clean]
     sources:
       - ./src/fonts/**/*
       - ./src/images/**/*
@@ -9,7 +10,6 @@ tasks:
       - ./dist/fonts/*
       - ./dist/images/*
     cmds:
-      - task assets:clean
       - cp -r ./src/fonts/* ./dist/fonts
       - cp -r ./src/images/* ./dist/images
 

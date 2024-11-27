@@ -1,7 +1,15 @@
 version: '3'
 
+includes:
+  format: ./format.yaml
+  assets: ./assets.yaml
+  setup: ./setup.yaml
+    
 tasks:
-  site:
+  default:
+    deps:
+      - task: setup:clean
+      - task: setup:install
     sources:
       - src/_includes/**/*.{njk}
       - src/css/**/*.css
@@ -10,9 +18,13 @@ tasks:
       - dist/index.html
       - dist/css/global.css
     cmds:
+      - task: assets:create
+      - task: format:src
       - pnpm eleventy
-      - task build:postcss
-
-  postcss:
-    cmds:
       - pnpm postcss src/css/global.css -o dist/css/global.css
+      - task: format:dist
+
+  deploy:
+    deps: [default]
+    cmds:
+      - pnpm gh-pages -d dist -b deploy

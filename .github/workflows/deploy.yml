@@ -17,13 +17,16 @@ jobs:
         uses: arduino/setup-task@v2
         with:
           version: 3.x
-          repo-token: ${{ secrets.GH_FINE_GRAINED_TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "Antonio Ortiz"
+          git config --global user.email "ortiz.antonio@gmail.com"
           
       - name: Run Taskfile - build
-        run: task build:deploy
-        
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GH_FINE_GRAINED_TOKEN }}
-          publish_dir: ./dist
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          task build:deploy -- -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
