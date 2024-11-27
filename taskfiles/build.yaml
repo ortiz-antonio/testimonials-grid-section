@@ -22,7 +22,7 @@ tasks:
       - task: format:src
       - pnpm eleventy
       - pnpm postcss src/css/global.css -o dist/css/global.css
-      - task: format:dist
+#      - task: format:dist
 
   deploy:
     deps: [default]
