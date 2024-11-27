@@ -19,13 +19,12 @@
               images/{{ testimonial.authorSlug }}.jpg?{{ assetHash }}    1x,
               images/{{ testimonial.authorSlug }}@2x.jpg?{{ assetHash }} 2x
             "
-            width="50px"
-            height="50px"
+            width="50"
+            height="50"
           />
-          <hqgroup>
-            <h2>{{ testimonial.author }}</h2>
-            <p class="testimonial__status">{{ testimonial.status }}</p>
-          </hqgroup>
+
+          <h2>{{ testimonial.author }}</h2>
+          <p class="testimonial__status">{{ testimonial.status }}</p>
         </div>
         <p class="testimonial__summary">{{ testimonial.summary }}</p>
         <p class="testimonial__quote"><q>{{ testimonial.quote }}</q></p>
