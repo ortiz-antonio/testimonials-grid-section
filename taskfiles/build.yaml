@@ -7,6 +7,8 @@ includes:
     
 tasks:
   default:
+    env:
+      NODE_ENV: prod
     deps:
       - task: clean
       - task: setup:install
