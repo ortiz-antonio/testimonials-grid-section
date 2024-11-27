@@ -18,12 +18,26 @@ to change how empty grid tracks are handled */
   display: grid;
   gap: var(--gutter, var(--space-s-m));
   grid-template-columns: 1fr;
+  grid-template-areas: 'daniel-clifford' 'jonathan-walters' 'jeanette-harmon' 'patrick-abrams' 'kira-whittle';
 
-  /* stylelint-disable */
+    /* stylelint-disable */
   @media screen(md) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      'daniel-clifford  daniel-clifford jonathan-walters'
+      'kira-whittle kira-whittle kira-whittle'
+      'jeanette-harmon patrick-abrams  patrick-abrams';
+  }
+  /* stylelint-enable */
+  
+  /* stylelint-disable */
+  @media screen(lg) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      'daniel-clifford  daniel-clifford jonathan-walters kira-whittle'
+      'jeanette-harmon patrick-abrams  patrick-abrams kira-whittle';
   }
   /* stylelint-enable */
 }
-

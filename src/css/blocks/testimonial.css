@@ -58,32 +58,28 @@
   color: var(--color-base-dark);
 }
 
+.testimonial[data-layout-author='daniel-clifford'] {
+  grid-area: daniel-clifford;
+}
+
+.testimonial[data-layout-author='jonathan-walters'] {
+  grid-area: jonathan-walters;
+}
+
+.testimonial[data-layout-author='kira-whittle'] {
+  grid-area: kira-whittle;
+}
+
+.testimonial[data-layout-author='jeanette-harmon'] {
+  grid-area: jeanette-harmon;
+}
+
+.testimonial[data-layout-author='patrick-abrams'] {
+  grid-area: patrick-abrams;
+}
+
 /* stylelint-disable */
 @media screen(md) {
-  .testimonial[data-layout-author='daniel-clifford'] {
-    grid-column: 1 / span 2;
-    grid-row: 1;
-  }
-
-  .testimonial[data-layout-author='jonathan-walters'] {
-    grid-column: 3;
-    grid-row: 1;
-  }
-
-  .testimonial[data-layout-author='kira-whittle'] {
-    grid-column: 4;
-    grid-row: 1 / span 2;
-  }
-
-  .testimonial[data-layout-author='jeanette-harmon'] {
-    grid-row: 2;
-    grid-column: 1;
-  }
-
-  .testimonial[data-layout-author='patrick-abrams'] {
-    grid-row: 2;
-    grid-column: 2 / span 2;
-  }
 }
 /* stylelint-enable */
 .testimonial__status,
