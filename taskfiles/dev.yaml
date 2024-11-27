@@ -13,9 +13,9 @@ tasks:
       - task: postcss
       - task: serve
       - task: assets:create
-    cmds:
       - task: format:src
-      - task: dev:start
+    cmds:
+      - task: format:dist
 
   serve:
     cmds:
