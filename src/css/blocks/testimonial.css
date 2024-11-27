@@ -43,7 +43,7 @@
 }
 
 .testimonial[data-layout='daniel-clifford'] {
-  background: var(--color-moderate-violet) url('../images/bg-pattern-quotation.svg')
+  background: var(--color-moderate-violet) url('../images/bg-pattern-quotation.svg?v=1.0.0')
     no-repeat top right;
   background-origin: content-box;
   color: var(--color-light-gray);
