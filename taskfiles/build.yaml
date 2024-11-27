@@ -8,7 +8,7 @@ includes:
 tasks:
   default:
     deps:
-      - task: setup:clean
+      - task: clean
       - task: setup:install
     sources:
       - src/_includes/**/*.{njk}
@@ -28,3 +28,8 @@ tasks:
     deps: [default]
     cmds:
       - pnpm gh-pages -d dist -b deploy
+      
+  clean:
+    cmds:
+      - rm -rf ./dist
+      - mkdir ./dist

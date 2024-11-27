@@ -33,7 +33,7 @@ tasks:
 
   dist:prettier:
     cmds:
-      - pnpm prettier ./dist --write
+      - pnpm prettier --ignore-path=.prettierignore ./dist --write
   dist:lint:
     cmds:
       - pnpm stylelint dist/css/*.css --fix

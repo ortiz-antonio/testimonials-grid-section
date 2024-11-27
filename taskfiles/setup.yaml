@@ -18,8 +18,3 @@ tasks:
     cmds:
       - echo "Installing package.json deps"
       - pnpm install
-
-  clean:
-    cmds:
-      - rm -rf ./dist
-      - mkdir ./dist
