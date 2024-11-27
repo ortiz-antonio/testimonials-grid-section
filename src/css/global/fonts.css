@@ -1,6 +1,6 @@
 /* @font-face here */
 @font-face {
-  font-display: swap;
+  font-display: fallback;
   font-family: 'Barlow Semi Condensed';
   font-style: normal;
   font-weight: 500;
@@ -9,7 +9,7 @@
 
 /* barlow-semi-condensed-600 - latin */
 @font-face {
-  font-display: swap;
+  font-display: fallback;
   font-family: 'Barlow Semi Condensed';
   font-style: normal;
   font-weight: 600;
