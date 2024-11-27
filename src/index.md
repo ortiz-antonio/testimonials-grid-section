@@ -2,6 +2,7 @@
 socialImage: "images/favicon-32x32.png"
 layout: "layouts/home.njk"
 title: "Frontend Mentor Graduates"
+summary: "Frontend Mentor Testimonials grid section Solution"
 testimonials:
   items:
     - author: Daniel Clifford
