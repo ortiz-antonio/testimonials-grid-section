@@ -43,8 +43,9 @@
 
 .testimonial[data-layout-author='daniel-clifford'] {
   background: var(--color-moderate-violet)
-    url('../images/bg-pattern-quotation.svg?v=1.0.0') no-repeat top right;
-  background-origin: content-box;
+    url('../images/bg-pattern-quotation.svg?v=1.0.0') no-repeat;
+  /*   background-origin: content-box; */
+  background-position-x: calc(100% - var(--space-l-xl));
   color: var(--color-base-dark);
 }
 
