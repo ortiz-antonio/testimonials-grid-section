@@ -31,8 +31,18 @@
   line-height: var(--leading-fine);
 }
 
-.testimonial__quote {
+
+
+.testimonial blockquote {
+  margin-inline:0;
   font-weight: var(--font-bold);
+&::before {
+  content: '\201C\00A0'; /* Unicode for left double quote */
+}
+
+&::after {
+ content: '\00A0\201D'; /* Unicode for right double quote */
+}
 }
 
 .testimonial[data-layout-author='daniel-clifford'] img,
@@ -44,6 +54,7 @@
 .testimonial[data-layout-author='daniel-clifford'] {
   background: var(--color-moderate-violet)
     url('../images/bg-pattern-quotation.svg?v=1.0.0') no-repeat;
+
   /*   background-origin: content-box; */
   background-position-x: calc(100% - var(--space-l-xl));
   color: var(--color-base-dark);
