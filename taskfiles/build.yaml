@@ -1,16 +1,14 @@
 version: '3'
 
 includes:
-  format: ./format.yaml
   assets: ./assets.yaml
   setup: ./setup.yaml
     
 tasks:
   default:
     env:
-      NODE_ENV: prod
+      NODE_ENV: ""
     deps:
-      - task: clean
       - task: setup:install
     sources:
       - src/_includes/**/*.{njk}
@@ -21,17 +19,5 @@ tasks:
       - dist/css/global.css
     cmds:
       - task: assets:create
-      - task: format:src
       - pnpm eleventy
       - pnpm postcss src/css/global.css -o dist/css/global.css
-#      - task: format:dist
-
-  deploy:
-    deps: [default]
-    cmds:
-      - pnpm gh-pages -d dist -b deploy
-      
-  clean:
-    cmds:
-      - rm -rf ./dist
-      - mkdir ./dist

@@ -1,7 +1,6 @@
 version: '3'
 
 includes:
-  format: ./format.yaml
   assets: ./assets.yaml
   setup: ./setup.yaml
   
@@ -13,10 +12,7 @@ tasks:
       - task: postcss
       - task: serve
       - task: assets:create
-      - task: format:src
-    cmds:
-      - task: format:dist
-
+        
   serve:
     cmds:
       - pnpm eleventy --serve

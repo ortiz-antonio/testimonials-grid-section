@@ -6,7 +6,25 @@ includes:
   build: ./taskfiles/build.yaml
   dev: ./taskfiles/dev.yaml
   setup: ./taskfiles/setup.yaml
-
+  format: ./taskfiles/format.yaml
+  
 tasks:
   default:
     - task -a
+
+  pre-commit:
+    aliases: [pc]
+    cmds:
+      - task: build
+      - task: format
+
+  deploy:
+    cmds:
+      - task: clean
+      - task: build
+      - pnpm gh-pages -d dist -b deploy
+      
+  clean:
+    cmds:
+      - rm -rf ./dist node_modules .task
+      - mkdir ./dist
