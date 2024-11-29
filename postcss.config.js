@@ -3,7 +3,7 @@ module.exports = {
     require('postcss-import-ext-glob'),
     require('postcss-import'),
     require('tailwindcss'),
-    ...(process.env.NODE_ENV === 'prod'
+    ...(process.env.NODE_ENV === 'production'
         ? [require("cssnano")({ preset: "default" })]
         : [])
   ]
