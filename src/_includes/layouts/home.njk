@@ -4,7 +4,6 @@
   <div class="grid">
     {% for testimonial in testimonials.items %}
       <article
-        id="{{ testimonial.authorSlug }}"
         aria-labelledby="{{ testimonial.authorSlug }}"
         class="testimonial"
         {% if testimonial.authorSlug == "daniel-clifford" or "jonathan-walters" or "patrick-addms" %}
@@ -24,7 +23,7 @@
           />
 
           <div>
-            <h2>{{ testimonial.author }}</h2>
+            <h2 id="{{ testimonial.authorSlug }}">{{ testimonial.author }}</h2>
             <p class="testimonial__status">{{ testimonial.status }}</p>
           </div>
         </div>
