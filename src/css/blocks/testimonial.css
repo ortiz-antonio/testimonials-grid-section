@@ -31,18 +31,17 @@
   line-height: var(--leading-fine);
 }
 
-
-
 .testimonial blockquote {
-  margin-inline:0;
+  margin-inline: 0;
   font-weight: var(--font-bold);
-&::before {
-  content: '\201C\00A0'; /* Unicode for left double quote */
-}
 
-&::after {
- content: '\00A0\201D'; /* Unicode for right double quote */
-}
+  &::before {
+    content: '\201C\00A0'; /* Unicode for left double quote */
+  }
+
+  &::after {
+    content: '\00A0\201D'; /* Unicode for right double quote */
+  }
 }
 
 .testimonial[data-layout-author='daniel-clifford'] img,
